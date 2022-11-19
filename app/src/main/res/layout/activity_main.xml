@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey"
+    android:padding="30sp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/MathHub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Math Hub"
+        android:textColor="#DBD4D4"
+
+        android:textSize="40sp" />
+
+    <TextView
+        android:id="@+id/Hub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/MathHub"
+        android:layout_alignParentRight="@+id/MathHub"
+        android:background="@color/purple_500"
+        android:paddingHorizontal="5sp"
+        android:text="Hub"
+        android:textColor="@color/black"
+        android:textSize="40sp" />
+    <TextView
+        android:id="@+id/problem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/MathHub"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:textColor="@color/white"
+        android:textSize="50sp"
+        tools:text="11 + 23 =" />
+
+    <LinearLayout
+        android:id="@+id/solutions"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_below="@id/problem"
+        android:layout_marginTop="90dp"
+        android:orientation="horizontal"
+        android:background="@color/grey">
+
+
+        <TextView
+            android:id="@+id/solution1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@color/grey"
+            android:textColor="@color/white"
+            android:textSize="40sp"
+            tools:text="34" />
+
+
+        <TextView
+            android:id="@+id/solution2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@color/grey"
+            android:textColor="@color/white"
+            android:textSize="40sp"
+            tools:text="34" />
+
+
+        <TextView
+            android:id="@+id/solution3"
+            android:layout_width="0dp"
+            android:background="@color/grey"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="40sp"
+            tools:text="34" />
+    </LinearLayout>
+        <TextView
+            android:id="@+id/score"
+           android:layout_below="@id/solutions"
+            android:layout_alignRight="@id/solutions"
+            android:layout_marginTop="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0/0"
+            android:textSize="30sp"
+            android:textColor="@color/white"
+
+            />
+        <Button
+            android:id="@+id/next"
+            android:layout_width="200sp"
+            android:layout_height="100sp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="40dp"
+            android:text="Дальше"
+            android:background="@drawable/button"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            />
+
+
+</RelativeLayout>
