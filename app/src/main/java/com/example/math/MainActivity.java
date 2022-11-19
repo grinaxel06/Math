@@ -53,8 +53,8 @@ public class MainActivity extends AppCompatActivity {
         }
     }
     class MyClickListener implements View.OnClickListener{
-        public int a;
-        public int b;
+        public int v;
+        public int f;
 
         @Override
         public void onClick(View view) {
@@ -68,19 +68,20 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.solution3:
                     String text = ((TextView)view).getText().toString();
                     if(text.equals(String.valueOf(problem.getResult()))){
-                        a++;
-                        b++;
-                        problem.getScore(a,b);
+                        v++;
+                        f++;
+                        problem.getScore(v,f);
                         view.setBackgroundColor(getColor(R.color.correct));
-                        binding.score.setText(String.valueOf(problem.getScore(a,b)));
+                        binding.score.setText(String.valueOf(problem.getScore(v,f)));
                     }
                     else{
-                        b++;
-                        problem.getScore(a,b);
+                        f++;
+                        problem.getScore(v,f);
                         view.setBackgroundColor(getColor(R.color.wrong));
-                        binding.score.setText(String.valueOf(problem.getScore(a,b)));
+                        binding.score.setText(String.valueOf(problem.getScore(v,f)));
 
                     }
+                    break;
             }
 
         }
